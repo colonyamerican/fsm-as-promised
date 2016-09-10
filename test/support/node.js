@@ -1,5 +1,5 @@
 var StateMachine = require('../..'),
-    Promise = Promise || require('es6-promise').Promise,
+    Promise = require('bluebird'),
     chai = require('chai'),
     expect = chai.expect;
 

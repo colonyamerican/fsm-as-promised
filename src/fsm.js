@@ -10,7 +10,7 @@ module.exports = StateMachine;
 function StateMachine(configuration, target) {
   'use strict';
 
-  var Promise = Promise || require('es6-promise').Promise,
+  var Promise = require('bluebird'),
       events = {},
       states = {},
       inTransition = false,
@@ -37,7 +37,8 @@ function StateMachine(configuration, target) {
   for (var name in events) {
     Object.defineProperty(target, name, {
       enumerable: true,
-      value: buildEvent(name)
+      value: buildEvent(name),
+      writable: true,
     });
   }
 

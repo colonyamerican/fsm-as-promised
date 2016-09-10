@@ -24,7 +24,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "es6-promise": "^2.0.0"
+    "bluebird": "^3.4.6"
   },
   "devDependencies": {
     "chai": "^1.9.1",
